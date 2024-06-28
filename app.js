@@ -22,3 +22,20 @@ let x = 5; // not descriptive
 let age = 5; // descriptive
 */
 let username = 'Ned Stark';
+
+/* 
+Converting Temperatures
+
+Celius to Fahrenheit formula: 
+F = C x 1.8 + 32
+
+*/
+let celius = 10;
+let fahrenheit = celius * 1.8 + 32;
+// console.log(fahrenheit);
+
+let subscribed = true;
+
+if (subscribed === true) {
+  console.log('show the video');
+}
