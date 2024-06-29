@@ -34,29 +34,43 @@ let celius = 10;
 let fahrenheit = celius * 1.8 + 32;
 // console.log(fahrenheit);
 
+//! CONDITIONAL OPERATOR
+
 let subscribed = true;
 
 if (subscribed === true) {
-  console.log('show the video');
+  //   console.log('show the video');
 }
 
 let cash = 45;
 let price = 40;
 
-// if (cash >= price) {
-//   console.log(`you paid extra - here's ${cash - price} dollars change`);
-// } else if (cash === price) {
-//   console.log('you paid the exact amount, have a nice day!');
-// } else {
-//   console.log(`not enough money - you still owe ${price - cash} dollars`);
-// }
+if (cash >= price) {
+  //   console.log(`you paid extra - here's ${cash - price} dollars change`);
+} else if (cash === price) {
+  //   console.log('you paid the exact amount, have a nice day!');
+} else {
+  //   console.log(`not enough money - you still owe ${price - cash} dollars`);
+}
 
-// a cleaner way to is:
+//! a cleaner way to is:
 let difference = cash - price;
 if (cash >= price) {
-  console.log(`you paid extra - here's ${difference} dollars change`);
+  //   console.log(`you paid extra - here's ${difference} dollars change`);
 } else if (cash === price) {
-  console.log('you paid the exact amount, have a nice day!');
+  //   console.log('you paid the exact amount, have a nice day!');
 } else {
-  console.log(`not enough money - you still owe ${difference * -1} dollars`);
+  //   console.log(`not enough money - you still owe ${difference * -1} dollars`);
 }
+
+//! LOGICAL OPERATORS
+// using the cash and price variables from above let's create a logical block that checks if the store is open and if we have enough cash to buy the item
+
+let isStoreOpen = true;
+
+//? AND operator
+if (cash >= price && isStoreOpen) {
+  //   console.log('print the receipt');
+}
+
+//! TERNARY OPERATOR
