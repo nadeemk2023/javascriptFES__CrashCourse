@@ -74,3 +74,25 @@ if (cash >= price && isStoreOpen) {
 }
 
 //! TERNARY OPERATOR
+let hot = true;
+
+// hot
+//   ? console.log('weather is hot outside')
+//   : console.log('weather is cold outside');
+
+let loggedIn = true;
+
+let str = subscribed && loggedIn ? 'show the video' : 'hide the video';
+
+// console.log(str);
+
+//? Ternary Exercise
+// cash >= price && isStoreOpen
+//   ? console.log('give receipt')
+//   : console.log('Do not give receipt');
+
+//? let's refactor the above code to make it more readable and cleaner so we are not console.logging multiple times
+
+let receipt =
+  cash >= price && isStoreOpen ? 'give receipt' : 'do not give receipt';
+// console.log(receipt);
