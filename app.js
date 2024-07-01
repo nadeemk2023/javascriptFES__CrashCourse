@@ -96,3 +96,53 @@ let str = subscribed && loggedIn ? 'show the video' : 'hide the video';
 let receipt =
   cash >= price && isStoreOpen ? 'give receipt' : 'do not give receipt';
 // console.log(receipt);
+
+//! LOOPS
+let countNoLoop = 1;
+countNoLoop = countNoLoop + 1;
+
+// console.log(countNoLoop);
+
+//? While Loop
+let count = 1;
+while (count < 100) {
+  count = count + 1;
+  //   console.log(count);
+}
+
+//? For Loop
+//* lets run the same function above in a for loop
+
+for (let i = 1; i < 100; i++) {
+  //   console.log(i + 1);
+}
+
+//? For Loop Exercise
+/* Write a for-loop that loops through 1 to 20 
+* if a number is divisible by 3, print "Frontend"
+* if a number is divisible by 5, print "Simplified"
+* if a number is divisible by 3 and 5, print "Frontend Simplified"
+* if a number is not divisble by 3 or 5, print the number
+
+* @example
+* 1 -> 1
+* 2 -> 2
+* 3 -> Frontend
+* 4 -> 4
+* 5 -> Simplified
+*...
+* 15 -> Frontend Simplified
+*20 -> Simplified
+*/
+
+for (let i = 1; i <= 20; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log('Frontend Simplified');
+  } else if (i % 3 === 0) {
+    console.log('Frontend');
+  } else if (i % 5 === 0) {
+    console.log('Simplified');
+  } else {
+    console.log(i);
+  }
+}
