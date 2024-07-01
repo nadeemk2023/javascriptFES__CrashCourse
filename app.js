@@ -137,12 +137,32 @@ for (let i = 1; i < 100; i++) {
 
 for (let i = 1; i <= 20; i++) {
   if (i % 3 === 0 && i % 5 === 0) {
-    console.log('Frontend Simplified');
+    // console.log('Frontend Simplified');
   } else if (i % 3 === 0) {
-    console.log('Frontend');
+    // console.log('Frontend');
   } else if (i % 5 === 0) {
-    console.log('Simplified');
+    // console.log('Simplified');
   } else {
-    console.log(i);
+    // console.log(i);
   }
+}
+
+//? For Loop Exercise 2
+/* Print out every character from the string:
+* 'Frontend Simplified'
+
+* @example
+* 'F'
+* 'r'
+* 'o'
+* ...
+* 'e'
+* 'd'
+
+*/
+
+const str2 = 'Frontend Simplified';
+
+for (let i = 0; i < str2.length; i++) {
+  //   console.log(str2[i]);
 }
