@@ -166,3 +166,64 @@ const str2 = 'Frontend Simplified';
 for (let i = 0; i < str2.length; i++) {
   //   console.log(str2[i]);
 }
+
+//! FUNCTIONS (function declaration)
+// console.log('Welcome to FES, David');
+// console.log('Welcome to FES, Zen');
+// console.log('Welcome to FES, Mitri');
+
+//todo DRY - Don't Repeat Yourself
+//todo Functions are used to store a block of code that can be reused multiple times
+
+function welcomePersonToFes(name) {
+  //   console.log(`Welcome to Frontend Simplified, ${name}`);
+}
+
+welcomePersonToFes('David');
+welcomePersonToFes('Zen');
+welcomePersonToFes('Mitri');
+
+function welcomePersonToFes2(firstName, lastName) {
+  //   console.log(`Welcome to Frontend Simplified, ${firstName} ${lastName}`);
+}
+
+welcomePersonToFes2('David', 'Bragg');
+welcomePersonToFes2('John', 'Doe');
+
+function fn() {
+  return 5;
+  console.log('my function');
+}
+
+// fn();
+
+function sumOfTwoNumbers(num1, num2) {
+  return num1 + num2;
+}
+
+// console.log(sumOfTwoNumbers(10, 10));
+
+//? Function Exercise convertCelciusToFahrenheit
+/*
+Create a function that convert Celsius to Fahrenheit
+*
+Celsius to Fahrenheit formula:
+* F = C x 1.8 + 32
+
+* @example
+* convertCelsiusToFahrenheit(0) -> 32
+* convertCelsiusToFahrenheit(10) -> 50
+* convertCelsiusToFahrenheit(30) -> 86
+
+*/
+function convertCelsiusToFahrenheit(celsius) {
+  return celsius * 1.8 + 32;
+}
+//
+// console.log(convertCelsiusToFahrenheit(0));
+// console.log(convertCelsiusToFahrenheit(10));
+// console.log(convertCelsiusToFahrenheit(30));
+
+//! ARROW FUNCTION
+
+const convertCelsiusToFahrenheit2 = (celsius) => celsius * 1.8 + 32;
