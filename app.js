@@ -227,3 +227,25 @@ function convertCelsiusToFahrenheit(celsius) {
 //! ARROW FUNCTION
 
 const convertCelsiusToFahrenheit2 = (celsius) => celsius * 1.8 + 32;
+
+//! ARRAYS
+let item1 = 20;
+let item2 = 30;
+let item3 = 40;
+let item4 = 50;
+let item5 = 100;
+//* instead of this we want to store the items in an array which is a single variable that can store multiple values
+
+let itemArr = [20, 30, 40, 50, 100];
+
+//? First & last element of array:
+// console.log(itemArr[0]);
+// console.log(itemArr[itemArr.length - 1]);
+
+//? What about adding to an array?
+//* in order to add to an array we use the push method
+itemArr.push(200);
+//* this will add 200 to the end of the array
+
+// console.log(itemArr);
+//todo filter method
