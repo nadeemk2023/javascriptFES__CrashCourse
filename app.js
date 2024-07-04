@@ -226,7 +226,7 @@ function convertCelsiusToFahrenheit(celsius) {
 
 //! ARROW FUNCTION
 
-const convertCelsiusToFahrenheit2 = (celsius) => celsius * 1.8 + 32;
+const convertCelsiusToFahrenheit2 = celsius => celsius * 1.8 + 32;
 
 //! ARRAYS
 let item1 = 20;
@@ -253,21 +253,38 @@ itemArr.push(200);
 //? itemArr.filter(() => {});
 
 // this is a very similar syntax as an arrow function within the filter method
-let newItemArr = itemArr.filter((item) => {
+let newItemArr = itemArr.filter(item => {
   //   console.log(item);
 });
 // console.log(newItemArr);
 // currently this will log all the items in the array but the filter method will return an empty array because there is no truthy value being returned to the filter method
 
 //* let's test this by making all the iterations of the filter method return true
-newItemArr = itemArr.filter((item) => {
+newItemArr = itemArr.filter(item => {
   //   console.log(item);
   return true;
 });
 
 //* let's return the item if it is less than or equal to 50
-newItemArr = itemArr.filter((item) => {
+newItemArr = itemArr.filter(item => {
   //   console.log(item);
   return item <= 50;
 });
-console.log(newItemArr);
+// console.log(newItemArr);
+
+//? Filter Exercise
+/**
+ * Filter out all the 'FAIL' elements in an array
+ *
+ * @example
+ * ['A+', 'A', 'FAIL] => ['A+', 'A']
+ * ['FAIL', 'FAIL', 'B'] => ['B']
+ * ['FAIL'] => []
+ *
+ */
+let grades = ['A+', 'A', 'FAIL'];
+
+let passingGrades = grades.filter(grade => {
+  return grade !== 'FAIL';
+});
+// console.log(passingGrades);
