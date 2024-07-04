@@ -248,4 +248,26 @@ itemArr.push(200);
 //* this will add 200 to the end of the array
 
 // console.log(itemArr);
+
 //todo filter method
+//? itemArr.filter(() => {});
+
+// this is a very similar syntax as an arrow function within the filter method
+let newItemArr = itemArr.filter((item) => {
+  //   console.log(item);
+});
+// console.log(newItemArr);
+// currently this will log all the items in the array but the filter method will return an empty array because there is no truthy value being returned to the filter method
+
+//* let's test this by making all the iterations of the filter method return true
+newItemArr = itemArr.filter((item) => {
+  //   console.log(item);
+  return true;
+});
+
+//* let's return the item if it is less than or equal to 50
+newItemArr = itemArr.filter((item) => {
+  //   console.log(item);
+  return item <= 50;
+});
+console.log(newItemArr);
