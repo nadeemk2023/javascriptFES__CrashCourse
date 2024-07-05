@@ -288,3 +288,44 @@ let passingGrades = grades.filter(grade => {
   return grade !== 'FAIL';
 });
 // console.log(passingGrades);
+
+//? Filter exercise 2
+// Filter out all the 'FAIL' elements in an array WITHOUT using the filter method
+// create a new empty array called 'goodGrades' and add all the passing grades to it
+
+let goodGrades = [];
+
+for (let i = 0; i < grades.length; i++) {
+  if (grades[i] !== 'FAIL') {
+    goodGrades.push(grades[i]);
+  }
+}
+
+// console.log(goodGrades);
+
+//? Map Method
+let mapArr = [1, 4, 9, 16];
+
+let newMapArr = mapArr.map(element => 'dog');
+// console.log(newMapArr);
+
+//? Map Exercise
+/**
+ * Turn each element in an array of dollars into cents
+ *
+ * @example
+ * [1,5,10,3] => [100, 500, 1000, 300]
+ * [0, 10,20] => [0, 1000, 2000]
+ *
+ */
+
+let mapDollars = [1, 5, 10, 3];
+let mapCents = mapDollars.map(dollar => dollar * 100);
+// console.log(mapCents);
+
+//? let's do the same exercise without using the map method
+let mapCents2 = [];
+for (let i = 0; i < mapDollars.length; i++) {
+  mapCents2.push(mapDollars[i] * 100);
+}
+// console.log(mapCents2);
