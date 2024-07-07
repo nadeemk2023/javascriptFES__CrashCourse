@@ -329,3 +329,21 @@ for (let i = 0; i < mapDollars.length; i++) {
   mapCents2.push(mapDollars[i] * 100);
 }
 // console.log(mapCents2);
+
+//! Objects
+//* let userFirstName = 'David';
+//* let userLastName = 'Bragg';
+//* let userDiscordId = 'David Bragg#0001';
+//* let userSubscriptionStatus = 'Vip';
+
+//? instead of storing all these values in separate variables we can store them in an object
+
+let user = {
+  username: 'David',
+  email: 'david@frontendsimplified.com',
+  subscriptionStatus: 'VIP',
+  discordId: 'David Bragg#0001',
+};
+
+//? Accessing object properties
+// console.log(user.username);
