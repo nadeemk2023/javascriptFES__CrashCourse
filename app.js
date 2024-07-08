@@ -404,15 +404,51 @@ function login(email, password) {
   for (let i = 0; i < users.length; i++) {
     if (users[i].email === email) {
       if (users[i].password === password) {
-        console.log('login successful');
+        // console.log('login successful');
       } else {
-        console.log('incorrect password');
+        // console.log('incorrect password');
       }
       return;
     }
   }
-  console.log(`Could not find email: ${email} in our records`);
+  //   console.log(`Could not find email: ${email} in our records`);
 }
 
 login('david12@frontendsimplified.com', 'test123');
 login('mitri@frontendsimplified.com', 'mitri123');
+
+//? Object Exercise
+/**
+ * Create a register user function that accepts:
+ * - username
+ * - email
+ * - password
+ * - subscriptionStatus
+ * - discordId
+ * - lessonsCompleted
+ *
+ * Inside your register function:
+ * 1. Create a user object
+ * 2. Push this user object into the `users` array
+ */
+
+function registerUser(
+  username,
+  email,
+  password,
+  subscriptionStatus,
+  discordId,
+  lessonsCompleted
+) {
+  let newUser = {
+    username,
+    email,
+    password,
+    subscriptionStatus,
+    discordId,
+    lessonsCompleted,
+  };
+  users.push(newUser);
+}
+
+registerUser('Ned', 'ned123.com', 'ned123', 'VIP', 'Ned#0001', [0, 1]);
