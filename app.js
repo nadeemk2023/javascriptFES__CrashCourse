@@ -432,23 +432,40 @@ login('mitri@frontendsimplified.com', 'mitri123');
  * 2. Push this user object into the `users` array
  */
 
-function registerUser(
-  username,
-  email,
-  password,
-  subscriptionStatus,
-  discordId,
-  lessonsCompleted
-) {
-  let newUser = {
-    username,
-    email,
-    password,
-    subscriptionStatus,
-    discordId,
-    lessonsCompleted,
-  };
-  users.push(newUser);
+// function registerUser(
+//   username,
+//   email,
+//   password,
+//   subscriptionStatus,
+//   discordId,
+//   lessonsCompleted
+// ) {
+//   let newUser = {
+//     username,
+//     email,
+//     password,
+//     subscriptionStatus,
+//     discordId,
+//     lessonsCompleted,
+//   };
+//   users.push(newUser);
+// }
+//
+// registerUser('Ned', 'ned123.com', 'ned123', 'VIP', 'Ned#0001', [0, 1]);
+
+//? This is actually real bad practice because we have so many arguments in the function, it is hard to keep track of what each argument is for let's refactor it more effectively and make it more readable
+
+function registerUser(user) {
+  users.push(user);
 }
 
-registerUser('Ned', 'ned123.com', 'ned123', 'VIP', 'Ned#0001', [0, 1]);
+registerUser({
+  username: 'Ned',
+  email: 'ned123.com',
+  password: 'ned123',
+  subscriptionStatus: 'VIP',
+  discordId: 'Ned#0001',
+  lessonsCompleted: [0, 1],
+});
+
+console.log(users);
