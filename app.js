@@ -343,7 +343,76 @@ let user = {
   email: 'david@frontendsimplified.com',
   subscriptionStatus: 'VIP',
   discordId: 'David Bragg#0001',
+  lessonsCompleted: [0, 1],
 };
 
 //? Accessing object properties
 // console.log(user.username);
+
+//? Now lets access the first letter of the username
+// console.log(user.username[0]);
+
+//? Now lets access information about the user's completion of lessons
+// console.log(user.lessonsCompleted);
+
+//* we can treat this just like an array and use higher order functions like map and filter on it
+// console.log(user.lessonsCompleted.map(lesson => lesson + 1));
+
+//? Now lets turn our object into an array of users
+let users = [
+  {
+    username: 'David',
+    email: 'david@frontendsimplified.com',
+    subscriptionStatus: 'VIP',
+    discordId: 'David Bragg#0001',
+    lessonsCompleted: [0, 1],
+  },
+  {
+    username: 'Mitri',
+    email: 'mitri@frontendsimplified.com',
+    subscriptionStatus: 'VIP',
+    discordId: 'Mitri#0001',
+    lessonsCompleted: [0, 1, 2, 3],
+  },
+  {
+    username: 'Zen',
+    email: 'Zen@frontendsimplified.com',
+    password: 'zen123',
+    subscriptionStatus: 'VIP',
+    discordId: 'Zen#0001',
+    lessonsCompleted: [0, 1, 2, 3],
+  },
+];
+
+//? now that we have an array of user objects let's access the first user's lessons completed
+// console.log(users[0].lessonsCompleted);
+
+//? let's add some passwords to each user and then create a function to login a user
+
+users[0].password = 'test123';
+users[1].password = 'mitri123';
+
+// function login(email, password) {
+//   for (let i = 0; i < users.length; i++) {
+//     if (users[i].email === email && users[i].password === password) {
+//       console.log('login successful');
+//     }
+//   }
+// }
+
+function login(email, password) {
+  for (let i = 0; i < users.length; i++) {
+    if (users[i].email === email) {
+      if (users[i].password === password) {
+        console.log('login successful');
+      } else {
+        console.log('incorrect password');
+      }
+      return;
+    }
+  }
+  console.log(`Could not find email: ${email} in our records`);
+}
+
+login('david12@frontendsimplified.com', 'test123');
+login('mitri@frontendsimplified.com', 'mitri123');
