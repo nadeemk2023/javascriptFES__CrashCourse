@@ -468,4 +468,28 @@ registerUser({
   lessonsCompleted: [0, 1],
 });
 
-console.log(users);
+// console.log(users);
+
+//! DOM (Document Object Model)
+//? there's two ways of selecting the title element that we created in our html file
+
+//? Method 1
+// console.log(document.querySelector('#title'));
+
+//? Method 2
+// console.log(document.getElementById('title'));
+
+//* Now let's change the text of the title element
+document.querySelector('#title').innerHTML = 'Frontend Simplified';
+
+//* Now let's change the CSS of an element on the page
+// document.querySelector('#title').style.color = 'red';
+
+//? DOM Exercise - creating a button and using a click listener to change the text of the title element
+
+//* First things first, let's create a function that changes the color of our text on click and add the click listener to the button in the html file
+function changeTitleToRed() {
+  document.querySelector('#title').style.color = 'red';
+}
+
+//? Dark Theme Example FES
