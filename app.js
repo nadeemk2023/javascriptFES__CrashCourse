@@ -493,3 +493,6 @@ function changeTitleToRed() {
 }
 
 //? Dark Theme Example FES
+function toggleDarkMode() {
+  document.querySelector('body').classList.toggle('dark-theme');
+}
